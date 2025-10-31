@@ -15,7 +15,7 @@ apt install -y nodejs npm
 
 **Set the PHP version to use**
 ```
-export PHP_VERSION=$(php -r "echo PHP_VERSION;")
+export PHP_VERSION=$(php -r "echo PHP_MAJOR_VERSION.'.'.PHP_MINOR_VERSION;")
 ```
 
 **Install optional debugger tool**

@@ -50,7 +50,7 @@ chown -R www-data:www-data /var/www/fusionpbx/app/openvscode
 **Intel x86 or AMD 64 - Copy the system service file**
 
 ```
-cp /var/www/fusionpbx/app/openvscode/resources/services/openvscode.service /etc/systemd/system
+cp /var/www/fusionpbx/app/openvscode/resources/services/openvscode.service /etc/systemd/system/openvscode.service
 systemctl daemon-reload
 systemctl start openvscode
 ```
@@ -60,12 +60,12 @@ systemctl start openvscode
 **ARM 64 - Copy the system service file**
 
 ```
-cp /var/www/fusionpbx/app/openvscode/resources/services/openvscode.service /etc/systemd/system
+cp /var/www/fusionpbx/app/openvscode/resources/services/arm_openvscode.service /etc/systemd/system/openvscode.service
 systemctl daemon-reload
 systemctl start openvscode
 ```
 
-**Optional: Auto start the system service at boot time**
+**Optional: Auto-start the system service at boot time**
 ```
 systemctl enable openvscode
 ```

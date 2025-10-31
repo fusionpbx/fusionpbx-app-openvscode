@@ -1,0 +1,24 @@
+[Unit]
+Description=OpenVSCode Server
+After=network-online.target
+
+[Service]
+WorkingDirectory=/var/www/fusionpbx
+ExecStart=/opt/openvscode-server-v1.103.1-linux-arm64/bin/openvscode-server --host=127.0.0.1 --port=4070 --server-base-path=/app/openvscode --user-data-dir=/var/www/.local/openvscode --extensions-dir=/var/www/.local/openvscode/extensions --log=info --without-connection-token --default-folder=/var/www/fusionpbx
+RuntimeDirectory=fusionpbx
+RuntimeDirectoryMode=0755
+RuntimeDirectoryPreserve=yes
+User=www-data
+Group=www-data
+Restart=always
+RestartSec=5
+StartLimitInterval=0
+Environment=SHELL=/bin/bash
+Environment=HOME=/var/www
+Environment=XDG_CONFIG_HOME=/var/www/.local/openvscode/config
+Environment=XDG_DATA_HOME=/var/www/.local/openvscode/user-data
+Environment=XDG_STATE_HOME=/var/www/.local/openvscode/state
+Environment=XDG_CACHE_HOME=/var/www/.local/openvscode/cache
+
+[Install]
+WantedBy=multi-user.target

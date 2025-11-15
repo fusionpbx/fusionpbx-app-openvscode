@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 WorkingDirectory=/var/www/fusionpbx
-ExecStart=/opt/openvscode-server-v1.103.1-linux-arm64/bin/openvscode-server --host=127.0.0.1 --port=4070 --server-base-path=/app/openvscode --user-data-dir=/var/www/.local/openvscode --extensions-dir=/var/www/.local/openvscode/extensions --log=info --without-connection-token --default-folder=/var/www/fusionpbx
+ExecStart=/opt/openvscode-server-v1.105.1-linux-arm64/bin/openvscode-server --host=127.0.0.1 --port=4070 --server-base-path=/app/openvscode --user-data-dir=/var/www/.local/openvscode --extensions-dir=/var/www/.local/openvscode/extensions --log=info --without-connection-token --default-folder=/var/www/fusionpbx
 RuntimeDirectory=fusionpbx
 RuntimeDirectoryMode=0755
 RuntimeDirectoryPreserve=yes
